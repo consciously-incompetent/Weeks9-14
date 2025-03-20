@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class KitChime : MonoBehaviour
 {
-    public void Chime()
+
+    public KitClock clock;
+    private void Start()
+    {
+        clock.OnTheHour.AddListener(Chime);
+    }
+    public void Chime(int hour)
+    {
+        Debug.Log("Chiming ! " + hour + " 0'clock");
+    }
+
+    public void ChimeWithoutArguments()
     {
         Debug.Log("Chiming !");
     }
