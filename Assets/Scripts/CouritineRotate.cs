@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CouritineRotate : MonoBehaviour
 {
 
     public AnimationCurve curve;
+    public Button button;
     public float t;
 
     // Start is called before the first frame update
@@ -17,7 +19,10 @@ public class CouritineRotate : MonoBehaviour
 
   IEnumerator swing()
     {
+        button.interactable = false;
+
         t = 0;
+
         while(t < 2)
         {
             t += Time.deltaTime;
@@ -33,6 +38,6 @@ public class CouritineRotate : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, t/25);
             yield return null;
         }
-        
+        button.interactable = true;
     }
 }
