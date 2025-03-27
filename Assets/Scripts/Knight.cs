@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Knight : MonoBehaviour
@@ -9,6 +10,8 @@ public class Knight : MonoBehaviour
     Animator animator;
     public float speed = 4;
     public bool canRun = true;
+    public List<AudioClip> StepSounds;
+   
     public AudioSource Step;
 
     void Start()
@@ -20,7 +23,7 @@ public class Knight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
 
         float direction = Input.GetAxisRaw("Horizontal");
 
@@ -54,7 +57,7 @@ public class Knight : MonoBehaviour
     public void StepSound()
     {
         Debug.Log("step");
-        Step.Play();
+        Step.PlayOneShot(StepSounds[UnityEngine.Random.Range(0,StepSounds.Count)]);
     }
 
 

@@ -336,6 +336,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   canRun: 1
+  StepSounds:
+  - {fileID: 8300000, guid: 989a98f10f6bb774e8bd44283ba14238, type: 3}
+  - {fileID: 8300000, guid: e1ceef65b1cd14a4a8b1bff0273618b9, type: 3}
+  - {fileID: 8300000, guid: 7a06d060eb97d9a40a32628046de6daf, type: 3}
+  - {fileID: 8300000, guid: 812c6f8452b51154a84005713793e30a, type: 3}
+  - {fileID: 8300000, guid: b900f1407c753554b83c8453c6d2b3c7, type: 3}
+  - {fileID: 8300000, guid: fc7fa49c912533a4a924527fcecbf8c0, type: 3}
+  - {fileID: 8300000, guid: 13ac9be8df197854a9365d48cc90dfbe, type: 3}
+  - {fileID: 8300000, guid: 021b6876bcca9a84d90e982edffde28c, type: 3}
+  - {fileID: 8300000, guid: e7bee4f7823b07747860fa834de03c99, type: 3}
+  - {fileID: 8300000, guid: c2a4fd29502655340a8c220f82ec6ab5, type: 3}
   Step: {fileID: 1742014431}
 --- !u!82 &1742014431
 AudioSource:
