@@ -9,6 +9,7 @@ public class Knight : MonoBehaviour
     Animator animator;
     public float speed = 4;
     public bool canRun = true;
+    public AudioSource Step;
 
     void Start()
     {
@@ -49,4 +50,13 @@ public class Knight : MonoBehaviour
     {
         canRun = true;
     }
+
+    public void StepSound()
+    {
+        Debug.Log("step");
+        Step.Play();
+    }
+
+
+
 }
