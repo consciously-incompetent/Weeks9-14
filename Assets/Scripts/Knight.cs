@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ public class Knight : MonoBehaviour
 
         SR.flipX = direction < 0;
 
-        animator.SetFloat("movement", MathF.Abs(direction));
+        animator.SetFloat("movement", Mathf.Abs(direction));
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -57,7 +57,7 @@ public class Knight : MonoBehaviour
     public void StepSound()
     {
         Debug.Log("step");
-        Step.PlayOneShot(StepSounds[UnityEngine.Random.Range(0,StepSounds.Count)]);
+        Step.PlayOneShot(StepSounds[Random.Range(0,StepSounds.Count)]);
     }
 
 
