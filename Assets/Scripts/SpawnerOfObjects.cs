@@ -36,7 +36,7 @@ public class SpawnerOfObjects : MonoBehaviour
 
     public void BishopSpawn()
     {
-        GameObject newBishop = Instantiate(pawn);
+        GameObject newBishop = Instantiate(bishop);
         newBishop.GetComponent<KillWhenClicked>().script = this;
         newBishop.GetComponent<KillWhenClicked>().IncreaseAmount = 5;
         newBishop.transform.position = Random.insideUnitCircle * 5;
@@ -44,13 +44,41 @@ public class SpawnerOfObjects : MonoBehaviour
 
     public void RookSpawn()
     {
-        GameObject newRook = Instantiate(pawn);
+        GameObject newRook = Instantiate(rook);
         newRook.GetComponent<KillWhenClicked>().script = this;
         newRook.GetComponent<KillWhenClicked>().IncreaseAmount = 10;
         newRook.transform.position = Random.insideUnitCircle * 5;
     }
 
 
+    public void addPawn()
+    {
+        if(score >= 15)
+        {
+            score -= 15;
+            timerScript.SpawnPieces.AddListener(PawnSpawn);
+        }
+    }
+
+    public void addBishop()
+    {
+        if(score >= 30)
+        {
+            score -= 30;
+            timerScript.SpawnPieces.AddListener(BishopSpawn);
+        }
+        
+    }
+
+    public void addRook()
+    {
+        if (score >= 60)
+        {
+            score -= 60;
+            timerScript.SpawnPieces.AddListener(RookSpawn);
+
+        }
+    }
 
 
 }

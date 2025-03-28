@@ -26,7 +26,7 @@ public class timer : MonoBehaviour
             if(t > 5)
             {
                 t = 0;
-                Debug.Log("game be runnin");
+                //Debug.Log("game be runnin");
                 SpawnPieces.Invoke();
             }
             yield return null;

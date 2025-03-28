@@ -19,7 +19,7 @@ public class KillWhenClicked : MonoBehaviour
         if (sprite.bounds.Contains(mousePos) && Input.GetMouseButtonDown(0))
         {
             
-            script.score += 3;
+            script.score += IncreaseAmount;
             Destroy(gameObject);
 
         }
