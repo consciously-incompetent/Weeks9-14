@@ -167,6 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41758ba8f0c600242b90ff50f6829a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  pawn: {fileID: 2323297440131701177, guid: d294773f3e5df754594a8d521d516bd0, type: 3}
+  bishop: {fileID: 6754290165441548501, guid: e4c17aa7b0bb0464c88ac63d50220775, type: 3}
+  rook: {fileID: 693087990375514896, guid: b193222ec5ba16d46b8200481e815b56, type: 3}
+  timerScript: {fileID: 610095752}
 --- !u!114 &610095752
 MonoBehaviour:
   m_ObjectHideFlags: 0

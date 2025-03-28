@@ -6,7 +6,8 @@ using UnityEngine;
 public class KillWhenClicked : MonoBehaviour
 {
     public SpriteRenderer sprite;
-    public spawnCircle script;
+    public SpawnerOfObjects script;
+    public float IncreaseAmount;
     // above needs to be the score tracking script and also the summoning script
  
     void Update()
@@ -18,7 +19,7 @@ public class KillWhenClicked : MonoBehaviour
         if (sprite.bounds.Contains(mousePos) && Input.GetMouseButtonDown(0))
         {
             
-            script.points += 3;
+            script.score += 3;
             Destroy(gameObject);
 
         }

@@ -15,7 +15,7 @@ public class spawnCircle : MonoBehaviour
         while(t < 5)
         {
             GameObject newTriangle = Instantiate(triangle);
-            newTriangle.GetComponent<KillWhenClicked>().script = this;
+            //newTriangle.GetComponent<KillWhenClicked>().script = this;
             newTriangle.transform.position = Random.insideUnitCircle * 5;
             t += 1;
         }
