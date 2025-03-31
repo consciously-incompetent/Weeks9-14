@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class timer : MonoBehaviour
 {
     bool GameRun = true;
     public float t;
     public UnityEvent SpawnPieces;
-
+    Coroutine GameOn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartSpawn());
+        GameOn = StartCoroutine(StartSpawn());
     }
 
 
@@ -38,7 +39,13 @@ public class timer : MonoBehaviour
 
     public void WinGame()
     {
-        StopAllCoroutines();
-        //StopCoroutine("StartSpawn");
+        //GetComponent<SpawnerOfObjects>().score = 
+        if (GetComponent<SpawnerOfObjects>().score >= 100)
+        {
+            StopCoroutine(GameOn);
+        }
+        //StopAllCoroutines();
+        
+        
     }
 }
