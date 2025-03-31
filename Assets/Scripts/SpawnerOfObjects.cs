@@ -80,5 +80,11 @@ public class SpawnerOfObjects : MonoBehaviour
         }
     }
 
+   // public void WinGame()
+   // {
+  //      StopAllCoroutines();
+    ///}
+
+
 
 }

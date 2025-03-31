@@ -36,5 +36,9 @@ public class timer : MonoBehaviour
 
 
 
-
+    public void WinGame()
+    {
+        StopAllCoroutines();
+        //StopCoroutine("StartSpawn");
+    }
 }
