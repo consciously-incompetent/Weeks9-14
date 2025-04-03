@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
     bool GameRun = true;
     public float t;
     public UnityEvent SpawnPieces;
+    public Slider slider;
     Coroutine GameOn;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         GameOn = StartCoroutine(StartSpawn());
+
     }
 
 
@@ -24,6 +28,8 @@ public class timer : MonoBehaviour
         while (GameRun)
         {
             t += Time.deltaTime;
+            slider.value = t;
+            
             if(t > 5)
             {
                 t = 0;

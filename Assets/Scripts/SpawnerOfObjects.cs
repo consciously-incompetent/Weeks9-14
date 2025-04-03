@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpawnerOfObjects : MonoBehaviour
@@ -9,6 +10,7 @@ public class SpawnerOfObjects : MonoBehaviour
     public GameObject bishop;
     public GameObject rook;
     public timer timerScript;
+    public TextMeshProUGUI scoreTracker;
 
 
     private void Start()
@@ -19,6 +21,10 @@ public class SpawnerOfObjects : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        scoreTracker.text = score.ToString();
+    }
 
     public void PawnSpawn()
     {
