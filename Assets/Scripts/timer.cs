@@ -11,6 +11,19 @@ public class timer : MonoBehaviour
     public float t;
     public UnityEvent SpawnPieces;
     public Slider slider;
+
+  
+    public GameObject UIelement_upgrade_1;
+    public GameObject UIelement_upgrade_2;
+    public GameObject UIelement_upgrade_3;
+    public GameObject UIelement_win;
+    public GameObject UIelement_winText;
+    public GameObject UIelement_score_1;
+    public GameObject UIelement_score_2;
+
+
+    public GameObject TimerImage;
+
     Coroutine GameOn;
 
 
@@ -48,7 +61,23 @@ public class timer : MonoBehaviour
         //GetComponent<SpawnerOfObjects>().score = 
         if (GetComponent<SpawnerOfObjects>().score >= 100)
         {
-            StopCoroutine(GameOn);
+
+
+            TimerImage.SetActive(false);
+            UIelement_upgrade_1.SetActive(false);
+            UIelement_upgrade_2.SetActive(false);
+            UIelement_upgrade_3.SetActive(false);
+            UIelement_win.SetActive(false);
+            UIelement_score_1.SetActive(false);
+            UIelement_score_2.SetActive(false);
+            UIelement_winText.SetActive(true);
+
+
+    StopCoroutine(GameOn);
+
+
+
+
         }
         //StopAllCoroutines();
         
