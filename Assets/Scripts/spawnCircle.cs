@@ -16,7 +16,7 @@ public class spawnCircle : MonoBehaviour
         {
             GameObject newTriangle = Instantiate(triangle);
             //newTriangle.GetComponent<KillWhenClicked>().script = this;
-            newTriangle.transform.position = Random.insideUnitCircle * 5;
+            newTriangle.transform.position = Random.insideUnitCircle * 4;
             t += 1;
         }
         
